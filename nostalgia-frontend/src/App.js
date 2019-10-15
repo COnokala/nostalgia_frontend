@@ -18,18 +18,29 @@ class App extends Component {
           <Link to="/Decades">
           <li>Decades</li>
           </Link>
-          <Link to="/Fads">
-          <li>Fads</li>
+          <Link to="/Fad">
+          <li>Fad</li>
           </Link>
         </ul>  
       </Header>
       <main>
         <Route path ="/" exact render = {props => <Home  {...props}/>}/>
+        <Route path ="/Fad" exact render = {props => <Fad  {...props}/>}/>
         <Route path ="/Decades" exact render = {props => <Decades  {...props}/>}/>
-        <Route path ="/Decades/:id" exact render = {props => <DecadesYear  {...props}/>}/>
-        <Route path ="/Fads" exact render = {props => <Fads  {...props}/>}/>
-        <Route path ="/Fads/:id" exact render = {props => <Amateur  {...props}/>}/>
-      </main>
+        <Route path ="/Decades/new" exact render = {props => <DecadesNew  {...props}/>}/>
+        <Route path ="/Decades/1980/" exact render = {props => <DecadesUpdate  {...props}/>}/>
+        <Route path ="/Decades/1980/edit/" exact render = {props => <DecadesDelete  {...props}/>}/>
+        <Route path ="/Decades/1980/delete/" exact render = {props => <DecadesDelete  {...props}/>}/>
+        <Route path ="/Decades/1990/" exact render = {props => <DecadesUpdate  {...props}/>}/>
+        <Route path ="/Decades/1990/edit/" exact render = {props => <DecadesDelete  {...props}/>}/>
+        <Route path ="/Decades/1990/delete/" exact render = {props => <DecadesDelete  {...props}/>}/>
+        <Route path ="/Decades/2000/" exact render = {props => <DecadesUpdate  {...props}/>}/>
+        <Route path ="/Decades/2000/edit/" exact render = {props => <DecadesDelete  {...props}/>}/>
+        <Route path ="/Decades/2000/delete/" exact render = {props => <DecadesDelete  {...props}/>}/>
+        <Route path ="/Decades/2010/" exact render = {props => <DecadesUpdate  {...props}/>}/>
+        <Route path ="/Decades/2010/edit/" exact render = {props => <DecadesDelete  {...props}/>}/>
+        <Route path ="/Decades/2010/delete/" exact render = {props => <DecadesDelete  {...props}/>}/>
+        </main>
       <Footer/>
     </div>
      )
